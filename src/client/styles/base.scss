@@ -1,0 +1,101 @@
+/*Set the SASS Variables */
+$font-stack: "Ubuntu", sans-serif;
+$font-heading: "Roboto", sans-serif;
+$nav-background-color: #f75;
+$nav-foreground-color: #fff;
+$nav-hover-color: #ccc;
+$primary-color: #333;
+$primary-background: #666633;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $font-stack;
+  color: $primary-color;
+  text-align: center;
+}
+
+h2 {
+  font-family: $font-heading;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 8px;
+}
+
+.nav-main {
+  width: 100%;
+  background-color: $nav-background-color;
+  height: 70px;
+  color: $nav-foreground-color;
+
+  .logo {
+    float: left;
+    height: 40px;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    line-height: 40px;
+  }
+
+  > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+
+    > li {
+      float: right;
+    }
+  }
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 15px 20px;
+  height: 40px;
+  line-height: 40px;
+  color: $nav-foreground-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $nav-hover-color;
+  }
+}
+
+main {
+  display: flex;
+  margin: 10vh 1em;
+  justify-content: center;
+
+  h2 {
+    font-size: 2em;
+    color: $primary-color;
+    margin: 0.2em 0;
+    justify-content: center;
+  }
+
+  section {
+    align-items: center;
+  }
+
+  .url-sites {
+    h2 {
+      font-size: 1em;
+      margin: 0.1em 0 0.2em;
+      justify-content: center;
+    }
+  }
+}
+
+section {
+  max-width: 800px;
+  width: 90vw;
+  margin: 40px auto 20px;
+
+  .results {
+    font-family: $font-heading;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 8px;
+  }
+}

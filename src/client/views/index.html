@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Evaluate a News Article with Natural Language Processing</title>
+</head>
+
+<body>
+
+    <!--Set the Navigation Bar and Menu-Items-->
+    <nav class="nav-main">
+        <div class="logo">NLP APP</div>
+        <ul>
+            <li>
+                <a href="#" class="nav-item">ABOUT</a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">RESOURCES</a>
+            </li>
+            <li>
+                <a href="#" class="nav-item">HOME</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="head-title">
+            <h2>Using Aylien Text-Analysing for NLP</h2>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="analyse">Analyse the following Sites</h2>
+            <div class="url-sites">
+                <h2>Enter a URL (in the form https://www.somesite.com) to analyse</h2>
+            </div>
+            <div class="container">
+                <form onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Enter your URL">
+                    <input type="submit" name="submit" value="SUBMIT" onclick="return Client.handleSubmit(event)"
+                        onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="results">
+                <p>FORM RESULTS:</p>
+            </div>
+            <div id="results">
+                <div id="url"></div>
+                <div id="text"></div>
+                <div id="polarity"></div>
+                <div id="subjectivity"></div>
+                <div id="polarity_confidence"></div>
+                <div id="subjectivity_confidence"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Courtesy: Aylien Text-Analysis API</p>
+    </footer>
+    <!--Register a Service Worker-->
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

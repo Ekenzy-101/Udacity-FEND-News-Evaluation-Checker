@@ -1,0 +1,9 @@
+$primary-color: #fff;
+$primary-background: #f75;
+header .head-title {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  color: $primary-color;
+  background-color: $primary-background;
+}
